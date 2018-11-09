@@ -53,6 +53,17 @@
       "pattern": "^(.*)$",
       "minLength": 1
     },
+    "SeasonClass": {
+      "type": "string",
+      "pattern": "^(.*)$",
+      "enum": [
+        "Adjunct",
+        "Main",
+        "Miniseries",
+        "Pro Forma",
+        "Recut"
+      ]
+    },
     "EntityType": {
       "type": "string",
       "pattern": "^(.*)$"
