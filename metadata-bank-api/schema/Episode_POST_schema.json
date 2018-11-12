@@ -1,7 +1,6 @@
 {
   "type": "object",
   "required": [
-    "ParentID",
     "ReferentType",
     "EpisodeNumber",
     "EpisodeClass",
@@ -285,7 +284,8 @@
         "Recut",
         "Segment",
         "Special",
-        "Standalone"
+        "Standalone",
+        "One Time Only"
       ]
     },
     "PrimaryGenre": {
@@ -1077,37 +1077,5 @@
         ]
       }
     }
-  },
-  "oneOf": [
-    {
-      "properties": {
-        "EpisodeClass": {
-          "enum": [
-            "Main",
-            "Special"
-          ]
-        },
-        "ParentID": {
-          "pattern": "^cid:org:pbs.org:Season"
-        }
-      }
-    },
-    {
-      "not": {
-        "properties": {
-          "EpisodeClass": {
-            "enum": [
-              "Main",
-              "Special"
-            ]
-          }
-        }
-      },
-      "properties": {
-        "ParentID": {
-          "type": "string"
-        }
-      }
-    }
-  ]
+  }
 }
